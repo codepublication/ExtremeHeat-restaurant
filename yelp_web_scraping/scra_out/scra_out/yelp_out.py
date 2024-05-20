@@ -69,7 +69,7 @@ class YelpCrawler:
 
     def get_page_number(self):
         self.browser.get(self.build_url())
-        self.browser.implicitly_wait(10)  # 隐式等待，最长等20秒
+        self.browser.implicitly_wait(10)  #
         total_mass = self.browser.find_element(By.CLASS_NAME, 'css-1aq64zd').find_element(By.TAG_NAME, 'span').text
         # total_page_str = ' '.join(map(str, rest_category[-3]))
         total_page_number = int(total_mass[-2:])
@@ -78,7 +78,7 @@ class YelpCrawler:
 
     def crawl_page(self):
         self.browser.get(self.build_url())
-        self.browser.implicitly_wait(10)  # 隐式等待，最长等20秒
+        self.browser.implicitly_wait(10)  #
 
         yelp_biz = []
         yelp_biz_urls = []
